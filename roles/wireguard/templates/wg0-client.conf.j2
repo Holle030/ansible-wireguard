@@ -1,0 +1,9 @@
+[Interface]
+PrivateKey = {{ lookup('file', 'secrets/pi-private.key') }}
+Address = 10.100.0.2/24
+
+[Peer]
+PublicKey = {{ lookup('file', 'secrets/server-public.key') }}
+Endpoint = holle.port4949.de:51820
+AllowedIPs = 0.0.0.0/0
+PersistentKeepalive = 25

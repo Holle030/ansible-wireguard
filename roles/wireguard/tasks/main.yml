@@ -1,0 +1,19 @@
+- name: Install WireGuard
+  apt:
+    name: wireguard
+    state: present
+    update_cache: true
+
+- name: Render WireGuard config from template
+  template:
+    src: "wg0-{{ 'server' if inventory_hostname in groups['server'] else 'client' }}.conf.j2"
+    dest: "/etc/wireguard/wg0.conf"
+    owner: root
+    group: root
+    mode: '0600'
+
+- name: Enable and start WireGuard
+  systemd:
+    name: wg-quick@wg0
+    enabled: true
+    state: started

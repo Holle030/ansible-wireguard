@@ -1,0 +1,4 @@
+# Private Schlüssel niemals ins Git aufnehmen!
+secrets/
+*.key
+*.conf

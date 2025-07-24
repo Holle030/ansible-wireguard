@@ -1,0 +1,5 @@
+- name: Install WireGuard VPN
+  hosts: all
+  become: true
+  roles:
+    - wireguard

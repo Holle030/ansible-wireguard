@@ -1,0 +1,8 @@
+[Interface]
+PrivateKey = {{ lookup('file', 'secrets/server-private.key') }}
+Address = 10.100.0.1/24
+ListenPort = 51820
+
+[Peer]
+PublicKey = {{ lookup('file', 'secrets/pi-public.key') }}
+AllowedIPs = 10.100.0.2/32
