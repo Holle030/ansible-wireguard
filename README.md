@@ -1,4 +1,4 @@
-# Ansible WireGuard VPN Setup
+## Ansible WireGuard VPN Setup
 
 Dieses Projekt installiert und konfiguriert WireGuard zwischen einem Raspberry Pi und einem öffentlichen Server (z. B. holle.port4949.de) über ein sicheres Peer-to-Peer-VPN.
 
